@@ -1,5 +1,6 @@
 import { ProductsIndex } from "./ProductsIndex"
-import { useState } from 'react'
+import { ProductsNew } from "./ProductsNew"
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 
 export function ProductsPage() {
@@ -13,12 +14,19 @@ export function ProductsPage() {
     })
   }
 
+  const handleProductsNew = (params, successCallback) => {
+    console.log('hey')
+    axios.post("http://localhost:3000/product.json", params).then((response) => {
+      setProducts([...products, response.data]);
+      successCallback();
+    });
+  }
 
+  useEffect(handleProductsIndex, [])
   return (
     <main>
-      <h1>Welcome to React!</h1>
       <ProductsIndex products={products}/>
-      <button onClick={handleProductsIndex}>button</button>
+      <ProductsNew onCreate={handleProductsNew}/>
     </main>
   );
 }
