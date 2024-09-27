@@ -1,5 +1,7 @@
 import { ProductsIndex } from "./ProductsIndex"
 import { ProductsNew } from "./ProductsNew"
+import { SignupPage } from "./SignupPage"
+import { LoginPage } from "./LoginPage"
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -25,6 +27,8 @@ export function ProductsPage() {
   useEffect(handleProductsIndex, [])
   return (
     <main>
+      <SignupPage />
+      <LoginPage />
       <ProductsIndex products={products}/>
       <ProductsNew onCreate={handleProductsNew}/>
     </main>
