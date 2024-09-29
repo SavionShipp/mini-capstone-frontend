@@ -6,7 +6,7 @@ export function ProductsNew ({onCreate}) {
   };
 
   return (
-    <div>
+    <div id="ProductsNew">
       <h1>New Products</h1>
       <form onSubmit={handleSubmit}>
         <div>

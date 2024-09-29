@@ -27,8 +27,8 @@ export function ProductsPage() {
   useEffect(handleProductsIndex, [])
   return (
     <main>
-      <SignupPage />
-      <LoginPage />
+      {/* <SignupPage />
+      <LoginPage /> */}
       <ProductsIndex products={products}/>
       <ProductsNew onCreate={handleProductsNew}/>
     </main>
