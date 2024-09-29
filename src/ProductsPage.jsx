@@ -29,7 +29,7 @@ export function ProductsPage() {
       {/* <SignupPage />
       <LoginPage /> */}
       <ProductsIndex products={products}/>
-      <ProductsNew onCreate={handleProductsNew}/>
+      {/* <ProductsNew onCreate={handleProductsNew}/> */}
     </main>
   );
 }
