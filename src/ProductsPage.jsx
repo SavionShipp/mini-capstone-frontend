@@ -9,19 +9,18 @@ export function ProductsPage() {
   const [products, setProducts] = useState([])
 
   const handleProductsIndex = () => {
-    console.log('hey')
     axios.get("http://localhost:3000/products.json").then(response => {
       console.log(response.data)
       setProducts(response.data)
     })
   }
 
-  const handleProductsNew = (params, successCallback) => {
-    axios.post("http://localhost:3000/product.json", params).then((response) => {
-      setProducts([...products, response.data]);
-      successCallback();
-    });
-  }
+  // const handleProductsNew = (params, successCallback) => {
+  //   axios.post("http://localhost:3000/product.json", params).then((response) => {
+  //     setProducts([...products, response.data]);
+  //     successCallback();
+  //   });
+  // }
 
   useEffect(handleProductsIndex, [])
   return (

@@ -5,7 +5,7 @@ const navigate = useNavigate();
 const handleSubmit = (event) => {
   event.preventDefault()
   const params = new FormData(event.target)
-  axios.get("http://localhost:3000/products.json").then(response => {
+  axios.post("http://localhost:3000/product.json").then(response => {
     console.log('response.data')
     navigate('/')
   })
