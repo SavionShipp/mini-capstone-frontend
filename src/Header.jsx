@@ -7,7 +7,7 @@ export function Header() {
         <Link to="/Signup"> Signup</Link> | 
         <Link to="/Login"> Login</Link> | 
         <Link to="/"> Home</Link> | 
-        <Link to="/New"> Create Product</Link>
+        <Link to="/products/new"> New Product</Link>
       </nav>
     </header>
   )

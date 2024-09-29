@@ -17,7 +17,6 @@ export function ProductsPage() {
   }
 
   const handleProductsNew = (params, successCallback) => {
-    console.log('hey')
     axios.post("http://localhost:3000/product.json", params).then((response) => {
       setProducts([...products, response.data]);
       successCallback();
